@@ -4,7 +4,8 @@ services:
     build: flask
     volumes:
       - app:/app
-    ports:      -"8000:8000"
+    ports: 
+      - "8000:8000"
     links:
       - redis:redis
     depends_on:
@@ -12,7 +13,7 @@ services:
   redis:
     image: "redis:alpine"
     expose:
-      -"6379"
+      - "6379"
   proxy:
     build: nginx
     restart: always
