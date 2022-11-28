@@ -1,0 +1,3 @@
+Flask
+redis
+gunicorn>=19,<20F
